@@ -1,0 +1,77 @@
+# 01_Client-Server-Architecture
+
+## Kiến trúc Client-Server
+Kiến trúc Client-Server là một mô hình thiết kế phần mềm phổ biến trong hệ thống phân tán, giúp tổ chức và quản lý giao tiếp giữa hai thành phần chính: **Client** và **Server**.
+
+---
+
+## Đặc điểm
+
+### Tách biệt vai trò
+- **Máy khách (Client)**: Chủ yếu tập trung vào giao diện người dùng (UI) và gửi yêu cầu đến Server.
+- **Máy chủ (Server)**: Xử lý logic nghiệp vụ, truy cập cơ sở dữ liệu, và phản hồi thông tin cho Client.
+
+### Mô hình giao tiếp
+- Thường sử dụng giao thức **HTTP/HTTPS** trong web.
+- Hoặc giao thức cấp thấp hơn như **TCP/IP** hoặc **UDP**.
+
+### Tính đồng thời
+Một Server có thể xử lý nhiều yêu cầu từ nhiều Client khác nhau.
+
+### Khả năng mở rộng
+Kiến trúc này cho phép mở rộng theo chiều ngang (thêm máy chủ) hoặc chiều dọc (nâng cấp cấu hình máy chủ).
+
+---
+
+## Luồng hoạt động cơ bản
+
+1. **Client gửi yêu cầu**: Người dùng thực hiện một hành động (như click chuột), và Client gửi một yêu cầu (Request) đến Server qua mạng.
+2. **Server xử lý yêu cầu**: Server nhận yêu cầu, xử lý logic cần thiết (truy vấn cơ sở dữ liệu, tính toán, v.v.).
+3. **Server gửi phản hồi**: Server gửi kết quả về Client để hiển thị cho người dùng.
+
+---
+
+## Các kiểu mô hình Client-Server
+
+### 1-Tier Architecture
+- Tất cả xử lý (Client + Server) diễn ra trên cùng một máy.
+- **Ví dụ**: Ứng dụng Microsoft Access chạy cục bộ.
+
+### 2-Tier Architecture
+- Giao tiếp trực tiếp giữa Client và Server.
+- **Ví dụ**: Ứng dụng cơ sở dữ liệu kết nối trực tiếp đến MySQL hoặc SQL Server.
+
+### 3-Tier Architecture
+- Bao gồm:
+  - **Client**: Giao diện người dùng.
+  - **Application Server**: Xử lý logic.
+  - **Database Server**: Lưu trữ dữ liệu.
+- **Ví dụ**: Ứng dụng web hiện đại với backend như Node.js và cơ sở dữ liệu như PostgreSQL.
+
+### N-Tier Architecture
+- Mở rộng thêm các lớp (Layer) như caching, messaging, API gateway.
+- **Dùng trong**: Các hệ thống lớn như Microservices.
+
+---
+
+## Ưu điểm của Client-Server Architecture
+
+1. **Tính bảo mật cao**: Server quản lý dữ liệu tập trung và kiểm soát quyền truy cập.
+2. **Dễ bảo trì**: Chỉ cần cập nhật Server thay vì Client.
+3. **Mở rộng linh hoạt**: Thêm tài nguyên Server khi cần xử lý nhiều Client hơn.
+4. **Khả năng tái sử dụng**: Dữ liệu và dịch vụ từ Server có thể được tái sử dụng bởi nhiều Client.
+
+---
+
+## Hạn chế của Client-Server Architecture
+
+1. **Tắc nghẽn Server**: Nếu Server không đủ mạnh, hệ thống sẽ chậm khi có nhiều Client.
+2. **Phụ thuộc mạng**: Hiệu suất phụ thuộc vào kết nối mạng.
+3. **Chi phí triển khai cao**: Server yêu cầu tài nguyên phần cứng và phần mềm tốt hơn.
+
+## Tại sao quan trọng?
+Kiến trúc Client-Server giúp tách biệt vai trò và chức năng của từng thành phần trong hệ thống, cho phép dễ dàng mở rộng và duy trì. Điều này cho phép các lập trình viên phát triển hệ thống một cách linh hoạt hơn và cải thiện khả năng quản lý.
+
+## Tài liệu học thêm
+- [GeeksforGeeks - Client-Server Architecture](https://www.geeksforgeeks.org/client-server-architecture/)
+- [Wikipedia - Client–server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)

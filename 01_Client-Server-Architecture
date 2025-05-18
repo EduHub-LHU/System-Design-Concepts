@@ -69,9 +69,15 @@ Kiến trúc này cho phép mở rộng theo chiều ngang (thêm máy chủ) ho
 2. **Phụ thuộc mạng**: Hiệu suất phụ thuộc vào kết nối mạng.
 3. **Chi phí triển khai cao**: Server yêu cầu tài nguyên phần cứng và phần mềm tốt hơn.
 
-## Tại sao quan trọng?
-Kiến trúc Client-Server giúp tách biệt vai trò và chức năng của từng thành phần trong hệ thống, cho phép dễ dàng mở rộng và duy trì. Điều này cho phép các lập trình viên phát triển hệ thống một cách linh hoạt hơn và cải thiện khả năng quản lý.
+---
 
 ## Tài liệu học thêm
+
 - [GeeksforGeeks - Client-Server Architecture](https://www.geeksforgeeks.org/client-server-architecture/)
 - [Wikipedia - Client–server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
+
+---
+
+## Thông tin README
+
+Tài liệu này cung cấp cái nhìn toàn diện về Kiến trúc Client-Server, bao gồm các đặc điểm, luồng hoạt động, các kiểu mô hình, ưu điểm và hạn chế. Được thiết kế để tham khảo và học hỏi dễ dàng.
